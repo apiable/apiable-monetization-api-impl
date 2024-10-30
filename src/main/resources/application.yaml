@@ -1,0 +1,19 @@
+server:
+  error:
+    include-message: always
+    include-stacktrace: never
+  port: 8181
+
+app:
+  gateways:
+    apigee:
+      key: ${APP_GATEWAYS_APIGEE_KEY:}
+
+logging:
+  file:
+    name:
+      path: ${LOGGING_FILE_PATH:logs}
+  level:
+    root: WARN
+    io:
+      apiable: INFO
